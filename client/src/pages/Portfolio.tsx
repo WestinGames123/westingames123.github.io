@@ -139,10 +139,11 @@ export default function Portfolio() {
 
 function CategoryCard({ category }: { category: PortfolioCategory }) {
   return (
-    <div
-      className="portfolio-card group"
-      style={{ border: `1px solid rgba(255,255,255,0.07)` }}
-    >
+    <Link href={category.categoryHref}>
+      <div
+        className="portfolio-card group cursor-pointer"
+        style={{ border: `1px solid rgba(255,255,255,0.07)` }}
+      >
       {/* Banner image */}
       <div
         className="relative h-32 overflow-hidden"
@@ -186,47 +187,8 @@ function CategoryCard({ category }: { category: PortfolioCategory }) {
         >
           {category.description}
         </p>
-
-        {/* View all link */}
-        <Link href={category.categoryHref}>
-          <div
-            className="mb-3 text-xs cursor-pointer transition-all duration-200 inline-flex items-center gap-1"
-            style={{ fontFamily: "'JetBrains Mono', monospace", color: category.accentColor, opacity: 0.7 }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = "0.7"; }}
-          >
-            view all →
-          </div>
-        </Link>
-
-        {/* Sub-category pills */}
-        <div className="flex flex-wrap gap-2">
-          {category.subCategories.map((sub) => (
-            <Link key={sub.label} href={sub.href}>
-              <span
-                className="inline-block px-3 py-1 rounded-full text-xs cursor-pointer transition-all duration-200"
-                style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: "0.7rem",
-                  background: `${category.accentColor}10`,
-                  border: `1px solid ${category.accentColor}30`,
-                  color: category.accentColor,
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = `${category.accentColor}20`;
-                  (e.currentTarget as HTMLElement).style.boxShadow = `0 0 12px ${category.accentColor}25`;
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = `${category.accentColor}10`;
-                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
-                }}
-              >
-                {sub.label}
-              </span>
-            </Link>
-          ))}
-        </div>
       </div>
-    </div>
+      </div>
+    </Link>
   );
 }
