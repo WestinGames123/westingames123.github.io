@@ -102,7 +102,7 @@ export default function PortfolioSubPage({
                 <span className="hover:text-white transition-colors cursor-pointer">~</span>
               </Link>
               {breadcrumb.map((crumb, i) => (
-                <span key={crumb.href} className="flex items-center gap-1.5">
+                <span key={`breadcrumb-${i}`} className="flex items-center gap-1.5">
                   <span>/</span>
                   {i < breadcrumb.length - 1 ? (
                     <Link href={crumb.href}>
