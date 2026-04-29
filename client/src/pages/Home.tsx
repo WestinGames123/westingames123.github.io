@@ -1,13 +1,109 @@
 /*
  * DESIGN: "Void Glass" Cyberpunk — Bio Page
  * Inspired by guns.lol: centered profile card with Discord presence integration,
- * dashed borders, dark void background, neon green accents, music player
+ * dashed borders, dark void background, neon green accents, music player with auto-play
  */
 
 import { useLanyard, getAvatarUrl, getStatusColor, getStatusLabel } from "@/hooks/useLanyard";
+import { useEffect, useRef, useState } from "react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6BfgG8qVnGwCP7Bhb8/hero-bg-HXKanv8moNhViZryyzjWuK.webp";
 const DISCORD_USER_ID = "851276979318554635";
+
+function MusicPlayer() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    // Auto-play when component mounts
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {
+        // Autoplay prevented by browser, user must interact first
+      });
+      setIsPlaying(true);
+    }
+  }, []);
+
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  return (
+    <div className="mt-3 dashed-card p-4">
+      <div className="flex items-center gap-3">
+        {/* Play/Pause button */}
+        <button
+          onClick={togglePlayPause}
+          className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-200"
+          style={{
+            background: "rgba(0,255,136,0.12)",
+            border: "1px solid rgba(0,255,136,0.3)",
+            cursor: "pointer",
+            padding: 0,
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.2)";
+            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 12px rgba(0,255,136,0.3)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.12)";
+            (e.currentTarget as HTMLElement).style.boxShadow = "none";
+          }}
+        >
+          {isPlaying ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#00ff88">
+              <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#00ff88">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          )}
+        </button>
+        <div className="flex-1 min-w-0">
+          <div
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: "0.8rem",
+              color: "rgba(255,255,255,0.85)",
+              fontWeight: 600,
+            }}
+          >
+            Falling Down
+          </div>
+          <div
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "0.68rem",
+              color: "rgba(255,255,255,0.4)",
+              marginTop: "2px",
+            }}
+          >
+            Lil Peep & XXXTENTACION
+          </div>
+        </div>
+        {/* Hidden audio element */}
+        <audio
+          ref={audioRef}
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+        >
+          <source
+            src="/manus-storage/YTDown_YouTube_Lil-Peep-_-XXXTENTACION-Falling-Down_Media_-jRKsiAOAA8_009_128k_a04b9259.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   const { data, loading } = useLanyard(DISCORD_USER_ID);
@@ -157,8 +253,7 @@ export default function Home() {
                     fontSize: "0.78rem",
                   }}
                 >
-                  passionate about building things on the internet.
-                  minecraft enthusiast, discord bot dev, and graphic designer.
+                  Hey, you can call me Westin! I am a passionate individual who enjoys having a good time.
                 </p>
               </>
             ) : (
@@ -232,74 +327,14 @@ export default function Home() {
                     fontSize: "0.78rem",
                   }}
                 >
-                  passionate about building things on the internet.
-                  minecraft enthusiast, discord bot dev, and graphic designer.
+                  Hey, you can call me Westin! I am a passionate individual who enjoys having a good time.
                 </p>
               </>
             )}
           </div>
 
-          {/* Music Player - Redesigned */}
-          <div className="mt-3 dashed-card p-4">
-            <div className="flex items-center gap-3">
-              {/* Play button icon */}
-              <div
-                className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-200"
-                style={{
-                  background: "rgba(0,255,136,0.12)",
-                  border: "1px solid rgba(0,255,136,0.3)",
-                  cursor: "pointer",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.2)";
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 12px rgba(0,255,136,0.3)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.12)";
-                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
-                }}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#00ff88">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-              <div className="flex-1 min-w-0">
-                <div
-                  style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontSize: "0.8rem",
-                    color: "rgba(255,255,255,0.85)",
-                    fontWeight: 600,
-                  }}
-                >
-                  Falling Down
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.68rem",
-                    color: "rgba(255,255,255,0.4)",
-                    marginTop: "2px",
-                  }}
-                >
-                  Lil Peep & XXXTENTACION
-                </div>
-              </div>
-              <audio
-                controls
-                style={{
-                  width: "80px",
-                  height: "24px",
-                  accentColor: "#00ff88",
-                }}
-              >
-                <source
-                  src="/manus-storage/YTDown_YouTube_Lil-Peep-_-XXXTENTACION-Falling-Down_Media_-jRKsiAOAA8_009_128k_a04b9259.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </div>
-          </div>
+          {/* Music Player - Auto-play with integrated controls */}
+          <MusicPlayer />
         </div>
       </div>
     </div>
