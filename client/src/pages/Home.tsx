@@ -20,7 +20,6 @@ function MusicPlayer() {
       audioRef.current.play().catch(() => {
         // Autoplay prevented by browser, user must interact first
       });
-      setIsPlaying(true);
     }
   }, []);
 
