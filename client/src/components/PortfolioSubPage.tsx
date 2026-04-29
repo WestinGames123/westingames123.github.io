@@ -9,7 +9,7 @@ import { Link } from "wouter";
 export interface WorkItem {
   title: string;
   description: string;
-  tags?: string[];
+  tags: string[];
   status?: "active" | "completed" | "archived";
   link?: string;
 }
