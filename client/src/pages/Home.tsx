@@ -15,12 +15,30 @@ function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    // Auto-play when component mounts
-    if (audioRef.current) {
-      audioRef.current.play().catch(() => {
-        // Autoplay prevented by browser, user must interact first
-      });
-    }
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    let unlockAdded = false;
+
+    const unlock = () => {
+      audio.play().catch(() => {});
+      document.removeEventListener("click", unlock);
+      document.removeEventListener("keydown", unlock);
+    };
+
+    // Try to auto-play immediately; fall back to first-interaction trigger
+    audio.play().catch(() => {
+      unlockAdded = true;
+      document.addEventListener("click", unlock);
+      document.addEventListener("keydown", unlock);
+    });
+
+    return () => {
+      if (unlockAdded) {
+        document.removeEventListener("click", unlock);
+        document.removeEventListener("keydown", unlock);
+      }
+    };
   }, []);
 
   const togglePlayPause = () => {
@@ -90,6 +108,7 @@ function MusicPlayer() {
         {/* Hidden audio element */}
         <audio
           ref={audioRef}
+          loop
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
         >
