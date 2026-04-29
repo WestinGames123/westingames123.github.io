@@ -6,23 +6,6 @@ import { Link } from "wouter";
 
 const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6BfgG8qVnGwCP7Bhb8/design-banner-FEnxQ9MkANecvBgjQdpzKX.webp";
 
-const subCategories = [
-  {
-    label: "Embeds",
-    href: "/portfolio/design/embeds",
-    description: "Discord embed design for servers, bots, and community management systems.",
-    icon: "💬",
-    tags: ["Discord", "Embeds", "UX", "Bots"],
-  },
-  {
-    label: "Graphics",
-    href: "/portfolio/design/graphics",
-    description: "Branding, banners, icons, thumbnails, and promotional graphic design.",
-    icon: "🖼️",
-    tags: ["Branding", "GFX", "Icons", "Banners"],
-  },
-];
-
 export default function DesignCategory() {
   return (
     <div className="min-h-screen" style={{ background: "#0a0a0a" }}>
@@ -47,30 +30,9 @@ export default function DesignCategory() {
       </div>
       <div className="px-4 py-8">
         <div className="max-w-5xl mx-auto">
-          <p className="mb-8" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.8rem", color: "rgba(255,255,255,0.4)" }}>
-            select a sub-category to explore
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger-children">
-            {subCategories.map((sub) => (
-              <Link key={sub.label} href={sub.href}>
-                <div className="portfolio-card p-5 cursor-pointer group" style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
-                  <div className="text-3xl mb-3">{sub.icon}</div>
-                  <h2 className="text-base font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif", color: "#ffffff" }}>
-                    {sub.label}
-                  </h2>
-                  <p className="text-xs mb-4 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace", color: "rgba(255,255,255,0.4)" }}>
-                    {sub.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {sub.tags.map((tag) => (
-                      <span key={tag} className="tag-badge" style={{ background: "rgba(0,212,255,0.06)", borderColor: "rgba(0,212,255,0.18)", color: "#00d4ff" }}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <div className="text-center py-16" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.8rem", color: "rgba(255,255,255,0.25)" }}>
+            <div className="text-4xl mb-4">🚧</div>
+            coming soon — check back later
           </div>
         </div>
       </div>

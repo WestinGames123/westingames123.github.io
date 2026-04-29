@@ -4,27 +4,39 @@ const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6Bf
 
 const items = [
   {
-    title: "SkyBlock Network",
-    description: "Managed a 500+ player SkyBlock server. Oversaw staff team of 12, handled player relations, and maintained server economy balance.",
-    tags: ["SkyBlock", "Staff Management", "Economy", "500+ players"],
-    status: "completed" as const,
-  },
-  {
-    title: "Survival SMP",
-    description: "Co-owner and manager of a whitelist survival SMP. Responsible for community events, rule enforcement, and server maintenance.",
-    tags: ["Survival", "SMP", "Community", "Events"],
+    title: "Netherboat Network (1.5K)",
+    description: "Currently managing a team of 12 highly active and professional staff members dedicated to providing a safe and positive experience for a younger player base.",
+    tags: ["Staff Management", "1.5K Players", "12 Staff", "Active"],
     status: "active" as const,
   },
   {
-    title: "Prison Server",
-    description: "Head Administrator for a Prison server. Managed rank progression systems, player disputes, and weekly events.",
-    tags: ["Prison", "Administration", "Events", "Ranks"],
-    status: "completed" as const,
+    title: "Christianity Hotline (500)",
+    description: "Sole manager of streamer Bill Jensen's Discord server. Oversee 5 staff members responsible for maintaining the community against heavy troll activity — averaging up to 5 raid attempts per day.",
+    tags: ["Discord", "Community Management", "500 Members", "5 Staff"],
+    status: "active" as const,
   },
   {
-    title: "Factions Server",
-    description: "Server Manager overseeing daily operations, staff scheduling, and player experience improvements for a competitive Factions server.",
-    tags: ["Factions", "PvP", "Management", "Operations"],
+    title: "Lifedupe7 (2K)",
+    description: "Owner for the 4 years the server ran. Primarily focused on development while also serving as staff manager for most of its life, overseeing around 20 staff members alongside other duties.",
+    tags: ["Owner", "2K Players", "20 Staff", "4 Years"],
+    status: "archived" as const,
+  },
+  {
+    title: "Achived (1.5K)",
+    description: "Responsible for managing staff, development, and overseeing server health. Took full charge of server operations while both owners were simultaneously on LOA for approximately a month.",
+    tags: ["Staff Management", "Development", "1.5K Players", "Server Health"],
+    status: "archived" as const,
+  },
+  {
+    title: "HeadDupe (300)",
+    description: "Staff manager for approximately 6 months, managing a team of around 15 staff members.",
+    tags: ["Staff Management", "300 Players", "15 Staff", "6 Months"],
+    status: "archived" as const,
+  },
+  {
+    title: "Lifedupe77 (800)",
+    description: "Lead manager for approximately one year, overseeing a team of around 6 staff members.",
+    tags: ["Lead Manager", "800 Players", "6 Staff", "1 Year"],
     status: "archived" as const,
   },
 ];
