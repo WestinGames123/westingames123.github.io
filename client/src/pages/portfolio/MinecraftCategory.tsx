@@ -11,23 +11,20 @@ const subCategories = [
   {
     label: "Management",
     href: "/portfolio/minecraft/management",
-    description: "Server ownership, administration, and team management experience.",
+    description: "Staff management, general management, and ownership experience.",
     icon: "🏰",
-    tags: ["Server Owner", "Admin", "Team Lead"],
   },
   {
     label: "Moderation",
     href: "/portfolio/minecraft/moderation",
-    description: "Staff moderation, ban appeals, anti-cheat, and community enforcement.",
+    description: "Ability to understand staff documents, and preform well while moderating.",
     icon: "🛡️",
-    tags: ["Moderator", "Anti-Cheat", "Appeals"],
   },
   {
     label: "Development",
     href: "/portfolio/minecraft/development",
-    description: "Custom plugin development using Spigot/Paper API in Java.",
+    description: "Plugin development, config development, and general server development.",
     icon: "⚙️",
-    tags: ["Java", "Spigot", "Paper", "Plugins"],
   },
 ];
 
@@ -75,13 +72,6 @@ export default function MinecraftCategory() {
                   <p className="text-xs mb-4 leading-relaxed" style={{ fontFamily: "'JetBrains Mono', monospace", color: "rgba(255,255,255,0.4)" }}>
                     {sub.description}
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {sub.tags.map((tag) => (
-                      <span key={tag} className="tag-badge" style={{ background: "rgba(0,255,136,0.06)", borderColor: "rgba(0,255,136,0.18)", color: "#00ff88" }}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </Link>
             ))}
