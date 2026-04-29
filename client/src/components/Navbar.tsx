@@ -38,7 +38,7 @@ export default function Navbar() {
                 textShadow: "0 0 12px rgba(0,255,136,0.4)",
               }}
             >
-              ~/portfolio
+              ~
             </span>
           </Link>
 

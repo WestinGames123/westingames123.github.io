@@ -193,21 +193,7 @@ function WorkItemCard({ item, accentColor }: { item: WorkItem; accentColor: stri
       >
         {item.description}
       </p>
-      <div className="flex flex-wrap gap-1.5">
-        {item.tags.map((tag) => (
-          <span
-            key={tag}
-            className="tag-badge"
-            style={{
-              background: `${accentColor}08`,
-              borderColor: `${accentColor}20`,
-              color: accentColor,
-            }}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+
       {item.link && (
         <a
           href={item.link}

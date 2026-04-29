@@ -38,7 +38,7 @@ export default function MinecraftManagement() {
         { label: "management", href: "/portfolio/minecraft/management" },
       ]}
       title="Minecraft · Management"
-      subtitle="server management experience across various Minecraft game modes and communities"
+      subtitle="Staff management, general management, and ownership experience."
       accentColor="#00ff88"
       bannerUrl={BANNER}
       items={items}

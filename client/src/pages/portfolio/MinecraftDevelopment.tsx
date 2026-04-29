@@ -38,7 +38,7 @@ export default function MinecraftDevelopment() {
         { label: "development", href: "/portfolio/minecraft/development" },
       ]}
       title="Minecraft · Development"
-      subtitle="custom Minecraft plugins and server-side development projects"
+      subtitle="Plugin development, config development, and general server development."
       accentColor="#00ff88"
       bannerUrl={BANNER}
       items={items}

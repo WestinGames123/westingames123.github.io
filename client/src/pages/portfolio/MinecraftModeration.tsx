@@ -38,7 +38,7 @@ export default function MinecraftModeration() {
         { label: "moderation", href: "/portfolio/minecraft/moderation" },
       ]}
       title="Minecraft · Moderation"
-      subtitle="moderation experience across competitive and community-focused Minecraft servers"
+      subtitle="Ability to understand staff documents, and preform well while moderating."
       accentColor="#00ff88"
       bannerUrl={BANNER}
       items={items}
