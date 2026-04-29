@@ -10,6 +10,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navbar from "./components/Navbar";
+import { useGoogleAnalytics } from "./hooks/useGoogleAnalytics";
 
 // Pages
 import Home from "./pages/Home";
@@ -25,6 +26,7 @@ import DesignCategory from "./pages/portfolio/DesignCategory";
 import DevelopmentCategory from "./pages/portfolio/DevelopmentCategory";
 
 function Router() {
+  useGoogleAnalytics();
   return (
     <>
       <Navbar />
