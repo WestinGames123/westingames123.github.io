@@ -6,25 +6,21 @@ const items = [
   {
     title: "EcoSkyBlock Plugin",
     description: "Custom SkyBlock plugin with island management, economy integration, and leaderboard system. Built with Spigot API in Java.",
-    tags: ["Java", "Spigot", "SkyBlock", "Economy"],
     status: "completed" as const,
   },
   {
     title: "StaffUtils",
     description: "Staff management plugin featuring vanish, freeze, inspect, and punishment logging. Used by 3+ servers.",
-    tags: ["Java", "Paper", "Staff Tools", "Logging"],
     status: "active" as const,
   },
   {
     title: "CustomEnchants",
     description: "Custom enchantments plugin with 30+ unique enchants, anvil integration, and configurable drop rates for HCF servers.",
-    tags: ["Java", "Enchants", "HCF", "Custom"],
     status: "completed" as const,
   },
   {
     title: "ArenaManager",
     description: "Dynamic arena creation and management system for PvP minigames. Supports multiple game modes and auto-reset.",
-    tags: ["Java", "PvP", "Minigames", "Arenas"],
     status: "active" as const,
   },
 ];
