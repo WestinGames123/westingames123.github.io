@@ -4,27 +4,27 @@ const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6Bf
 
 const items = [
   {
-    title: "EcoSkyBlock Plugin",
-    description: "Custom SkyBlock plugin with island management, economy integration, and leaderboard system. Built with Spigot API in Java.",
-    tags: ["Java", "Spigot", "SkyBlock", "Economy"],
-    status: "completed" as const,
-  },
-  {
-    title: "StaffUtils",
-    description: "Staff management plugin featuring vanish, freeze, inspect, and punishment logging. Used by 3+ servers.",
-    tags: ["Java", "Paper", "Staff Tools", "Logging"],
+    title: "Custom Plugins",
+    description: "I can create a simple plugin for your server. Please note, I am a beginner at plugin development.",
+    tags: ["Java", "Spigot", "Paper", "Plugins"],
     status: "active" as const,
   },
   {
-    title: "CustomEnchants",
-    description: "Custom enchantments plugin with 30+ unique enchants, anvil integration, and configurable drop rates for HCF servers.",
-    tags: ["Java", "Enchants", "HCF", "Custom"],
-    status: "completed" as const,
+    title: "DeluxeMenus Configs",
+    description: "I can create beautiful menus using DeluxeMenus.",
+    tags: ["DeluxeMenus", "Config", "Menus"],
+    status: "active" as const,
   },
   {
-    title: "ArenaManager",
-    description: "Dynamic arena creation and management system for PvP minigames. Supports multiple game modes and auto-reset.",
-    tags: ["Java", "PvP", "Minigames", "Arenas"],
+    title: "LuckPerms",
+    description: "I can create ranks with permissions for you.",
+    tags: ["LuckPerms", "Ranks", "Permissions"],
+    status: "active" as const,
+  },
+  {
+    title: "Other Configs",
+    description: "I can configure almost every major plugin. Some common ones include TAB, Essentials, Vulcan, and a plethora of other plugins.",
+    tags: ["TAB", "Essentials", "Vulcan", "Config"],
     status: "active" as const,
   },
 ];

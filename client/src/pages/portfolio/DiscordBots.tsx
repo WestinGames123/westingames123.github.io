@@ -4,34 +4,28 @@ const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6Bf
 
 const items = [
   {
-    title: "ModBot",
-    description: "Full-featured moderation bot with auto-mod, logging, warn/mute/ban commands, and appeal system. Used in 50+ servers.",
-    tags: ["Discord.js", "Moderation", "Auto-Mod", "Logging"],
+    title: "Moderation Bots",
+    description: "I can create a custom moderation bot for your server.",
+    tags: ["Moderation", "Custom", "Discord.js"],
     status: "active" as const,
   },
   {
-    title: "TicketBot",
-    description: "Advanced ticket management bot with categories, staff assignment, transcript generation, and analytics dashboard.",
-    tags: ["Discord.js", "Tickets", "Transcripts", "Analytics"],
+    title: "Server Management Bots",
+    description: "I can create an amazing Discord bot which manages your whole Discord server.",
+    tags: ["Server Management", "Discord.js", "Automation"],
     status: "active" as const,
   },
   {
-    title: "EconomyBot",
-    description: "Economy simulation bot with currency, shop, gambling, leaderboards, and daily rewards. MongoDB backend.",
-    tags: ["Discord.js", "Economy", "MongoDB", "Gambling"],
-    status: "completed" as const,
-  },
-  {
-    title: "StatusBot",
-    description: "Server status monitoring bot that tracks Minecraft server uptime and posts real-time updates to Discord channels.",
-    tags: ["Discord.js", "Minecraft", "Status", "Monitoring"],
+    title: "ER:LC Server Bots",
+    description: "I can create a server management bot integrating with the ER:LC API.",
+    tags: ["ER:LC", "API Integration", "Discord.js"],
     status: "active" as const,
   },
   {
-    title: "ApplicationBot",
-    description: "Staff application bot using Discord modals and select menus. Includes review panel, voting, and notification system.",
-    tags: ["Discord.js", "Applications", "Modals", "Staff"],
-    status: "completed" as const,
+    title: "Other Bots",
+    description: "I can create a plethora of other bots.",
+    tags: ["Discord.js", "Custom", "Versatile"],
+    status: "active" as const,
   },
 ];
 

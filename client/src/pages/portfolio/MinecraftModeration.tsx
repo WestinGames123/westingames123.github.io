@@ -4,27 +4,27 @@ const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6Bf
 
 const items = [
   {
-    title: "HCF Network",
-    description: "Senior Moderator on a Hardcore Factions network. Handled ban appeals, cheat detection, and player reports with a 24-hour response time.",
-    tags: ["HCF", "Anti-Cheat", "Ban Appeals", "Reports"],
-    status: "completed" as const,
+    title: "ImpendMC (8K)",
+    description: "Served as Junior Moderator on ImpendMC, a Discord community with 8,000 members.",
+    tags: ["Junior Moderator", "8K Discord Members", "Discord"],
+    status: "archived" as const,
   },
   {
-    title: "Minigames Hub",
-    description: "Moderation team lead for a minigames server. Trained new moderators, created moderation guidelines, and handled escalated cases.",
-    tags: ["Minigames", "Team Lead", "Training", "Guidelines"],
-    status: "active" as const,
+    title: "LeóneMC (10K)",
+    description: "Served as Helper on LeóneMC, a Discord community with 10,000 members.",
+    tags: ["Helper", "10K Discord Members", "Discord"],
+    status: "archived" as const,
   },
   {
-    title: "Roleplay Server",
-    description: "Head Moderator for a roleplay community. Enforced lore-consistent rules, managed in-character disputes, and maintained server atmosphere.",
-    tags: ["Roleplay", "Community", "Lore", "Disputes"],
-    status: "completed" as const,
+    title: "CTCKPVP (1K)",
+    description: "Served as Junior Moderator on CTCKPVP, which reached 1,000 Discord members at its peak.",
+    tags: ["Junior Moderator", "1K Discord Members", "Discord"],
+    status: "archived" as const,
   },
   {
-    title: "Bedwars Network",
-    description: "Moderator specializing in anti-cheat enforcement for a competitive Bedwars network. Reviewed screen-share evidence and issued punishments.",
-    tags: ["Bedwars", "Anti-Cheat", "Screen-Share", "Competitive"],
+    title: "DupeKid (2K)",
+    description: "Served as Moderator on DupeKid, which reached 2,000 Discord members at its peak.",
+    tags: ["Moderator", "2K Discord Members", "Discord"],
     status: "archived" as const,
   },
 ];
