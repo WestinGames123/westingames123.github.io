@@ -177,21 +177,6 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Views counter */}
-                  <div
-                    className="flex items-center gap-1.5 text-xs"
-                    style={{
-                      color: "rgba(255,255,255,0.35)",
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.7rem",
-                    }}
-                  >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                      <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                    <span>—</span>
-                  </div>
                 </div>
 
                 {/* Username + status */}
@@ -276,22 +261,6 @@ export default function Home() {
                         👤
                       </div>
                     </div>
-                  </div>
-
-                  {/* Views counter */}
-                  <div
-                    className="flex items-center gap-1.5 text-xs"
-                    style={{
-                      color: "rgba(255,255,255,0.35)",
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.7rem",
-                    }}
-                  >
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                      <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                    <span>—</span>
                   </div>
                 </div>
 

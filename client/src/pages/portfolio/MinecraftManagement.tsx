@@ -10,12 +10,6 @@ const items = [
     status: "active" as const,
   },
   {
-    title: "Christianity Hotline (500)",
-    description: "Sole manager of streamer Bill Jensen's Discord server. Oversee 5 staff members responsible for maintaining the community against heavy troll activity — averaging up to 5 raid attempts per day.",
-    tags: ["Discord", "Community Management", "500 Members", "5 Staff"],
-    status: "active" as const,
-  },
-  {
     title: "Lifedupe7 (2K)",
     description: "Owner for the 4 years the server ran. Primarily focused on development while also serving as staff manager for most of its life, overseeing around 20 staff members alongside other duties.",
     tags: ["Owner", "2K Players", "20 Staff", "4 Years"],
