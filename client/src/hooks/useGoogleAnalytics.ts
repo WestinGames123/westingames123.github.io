@@ -3,7 +3,11 @@ import { useLocation } from "wouter";
 
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void;
+    gtag?: (
+      command: "event" | "config" | "js" | "set",
+      targetOrDate: string | Date,
+      params?: Record<string, unknown>
+    ) => void;
     dataLayer?: unknown[];
   }
 }
