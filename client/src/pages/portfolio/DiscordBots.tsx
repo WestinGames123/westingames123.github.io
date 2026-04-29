@@ -5,26 +5,20 @@ const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6Bf
 const items = [
   {
     title: "Moderation Bots",
-    description: "I can create a custom moderation bot for your server.",
+    description: "I can create your server a custom moderation bot.",
     tags: ["Moderation", "Custom", "Discord.js"],
     status: "active" as const,
   },
   {
     title: "Server Management Bots",
-    description: "I can create an amazing Discord bot which manages your whole Discord server.",
+    description: "I can create a bot to fully manage your discord server.",
     tags: ["Server Management", "Discord.js", "Automation"],
     status: "active" as const,
   },
   {
     title: "ER:LC Server Bots",
-    description: "I can create a server management bot integrating with the ER:LC API.",
+    description: "I can create your server a management bot with ER:LC api integration.",
     tags: ["ER:LC", "API Integration", "Discord.js"],
-    status: "active" as const,
-  },
-  {
-    title: "Other Bots",
-    description: "I can create a plethora of other bots.",
-    tags: ["Discord.js", "Custom", "Versatile"],
     status: "active" as const,
   },
 ];
