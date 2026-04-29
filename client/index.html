@@ -7,6 +7,29 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Portfolio</title>
+    <script>
+      // Single Page App redirect handler for GitHub Pages.
+      // Reads the path encoded as a query string by 404.html and replaces
+      // the current history entry so the client-side router sees the real URL.
+      // See: https://github.com/rafgraph/spa-github-pages
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        } else {
+          var search = location.search;
+          if (search.slice(0, 2) === "?/") {
+            var decoded =
+              search
+                .slice(1)
+                .replace(/~and~/g, "&") +
+              location.hash;
+            history.replaceState(null, null, decoded);
+          }
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
