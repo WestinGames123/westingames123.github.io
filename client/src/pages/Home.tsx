@@ -28,9 +28,8 @@ function MusicPlayer() {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        audioRef.current.play().catch(() => {});
       }
-      setIsPlaying(!isPlaying);
     }
   };
 
@@ -95,7 +94,7 @@ function MusicPlayer() {
           onPause={() => setIsPlaying(false)}
         >
           <source
-            src="/manus-storage/YTDown_YouTube_Lil-Peep-_-XXXTENTACION-Falling-Down_Media_-jRKsiAOAA8_009_128k_a04b9259.mp3"
+            src="/YTDown_YouTube_Lil-Peep-_-XXXTENTACION-Falling-Down_Media_-jRKsiAOAA8_009_128k.mp3"
             type="audio/mpeg"
           />
         </audio>
