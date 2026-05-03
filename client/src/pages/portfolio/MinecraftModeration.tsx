@@ -4,10 +4,10 @@ const BANNER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663602858071/BZbo6Bf
 
 const items = [
   {
-    title: "ImpendMC (8K)",
-    description: "Served as Junior Moderator on ImpendMC, a Discord community with 8,000 members.",
+    title: "ImpendMC (8.5K)",
+    description: "Currently serving as a Helper at ImpendMC; I was previously a Junior Moderator.",
     tags: ["Junior Moderator", "8K Discord Members", "Discord"],
-    status: "archived" as const,
+    status: "active" as const,
   },
   {
     title: "LeóneMC (10K)",
